@@ -14,7 +14,7 @@ export class FavoritosListComponent {
     constructor(){
         this.title = 'Listado de marcadores:';
         this.favoritos = ['beaweb.es', 'youtube.com', 'twitter.com', 'google.com'];
-        this.favoritosVisibles = true;
+        this.favoritosVisibles = false;
     }
 
     showFavoritos(){
