@@ -12,18 +12,7 @@ var core_1 = require("@angular/core");
 var FavoritosListComponent = (function () {
     function FavoritosListComponent() {
         this.title = 'Listado de marcadores:';
-        this.favoritos = ['beaweb.es', 'youtube.com', 'twitter.com', 'google.com'];
-        this.favoritosVisibles = false;
     }
-    FavoritosListComponent.prototype.showFavoritos = function () {
-        this.favoritosVisibles = true;
-    };
-    FavoritosListComponent.prototype.hideFavoritos = function () {
-        this.favoritosVisibles = false;
-    };
-    FavoritosListComponent.prototype.changeColor = function () {
-        console.log(this.color);
-    };
     return FavoritosListComponent;
 }());
 FavoritosListComponent = __decorate([
