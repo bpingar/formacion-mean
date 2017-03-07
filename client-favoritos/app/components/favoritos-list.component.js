@@ -20,6 +20,7 @@ var FavoritosListComponent = (function () {
         console.log('FavoritosListComponen cargado!!');
         this._favoritoService.getFavoritos().subscribe(function (result) {
             console.log(result);
+            _this.favoritos = result.favoritos;
         }, function (error) {
             _this.errorMessage = error;
             if (_this.errorMessage != null) {
