@@ -30,6 +30,13 @@ export class FavoritoDetailComponent implements OnInit {
 
             this._favoritoService.getFavorito(id).subscribe(
                 response=>{
+                    /*this.favorito={
+                        title:'hola',
+                        description: '2',
+                        url:'32',
+                        _id:'12'
+                    };
+                    console.log(this.favorito);*/
                     this.favorito=response.favorito;
 
                     if(!this.favorito){

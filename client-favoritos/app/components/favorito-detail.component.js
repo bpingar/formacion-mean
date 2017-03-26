@@ -25,6 +25,13 @@ var FavoritoDetailComponent = (function () {
         this._route.params.forEach(function (params) {
             var id = params['id'];
             _this._favoritoService.getFavorito(id).subscribe(function (response) {
+                /*this.favorito={
+                    title:'hola',
+                    description: '2',
+                    url:'32',
+                    _id:'12'
+                };
+                console.log(this.favorito);*/
                 _this.favorito = response.favorito;
                 if (!_this.favorito) {
                     _this._router.navigate(['/']);
