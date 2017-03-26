@@ -9,9 +9,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
+var favorito_1 = require("../models/favorito");
 var FavoritoAddComponent = (function () {
     function FavoritoAddComponent() {
+        this.titleSection = "Crear favorito";
     }
+    FavoritoAddComponent.prototype.ngOnInit = function () {
+        this.favorito = new favorito_1.Favorito("", "", "");
+        console.log(this.favorito);
+    };
+    FavoritoAddComponent.prototype.onSubmit = function () {
+        console.log(this.favorito);
+    };
     return FavoritoAddComponent;
 }());
 FavoritoAddComponent = __decorate([

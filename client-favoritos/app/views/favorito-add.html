@@ -1,1 +1,20 @@
-<h1>favorito add</h1>
+<div class="favorito-box" *ngIf="favorito">    
+    <h1>{{titleSection}}</h1>
+
+    <form #formFavorito="ngForm" (ngSubmit)="onSubmit()">
+        <label>Título:</label>
+        <p>
+            <input type="text" name="title" #title="ngModel" [(ngModel)]="favorito.title"/>
+        </p>
+        <label>Descripción:</label>
+        <p>
+            <input type="text" name="description" #description="ngModel" [(ngModel)]="favorito.description"/>
+        </p>
+        <label>URL:</label>
+        <p>
+            <input type="url" name="url" #url="ngModel" [(ngModel)]="favorito.url"/>
+        </p>
+
+        <input type="submit" value="{{titleSection}}"/>
+    </form>
+</div>

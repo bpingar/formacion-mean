@@ -9,8 +9,20 @@ import {Favorito} from '../models/favorito';
     templateUrl: 'app/views/favorito-add.html'
 })
  
-export class FavoritoAddComponent { 
- 
+export class FavoritoAddComponent implements OnInit{ 
+    public titleSection: string;
+    public favorito: Favorito;
+
     constructor(){
+        this.titleSection="Crear favorito";
+    }
+
+    ngOnInit(){
+        this.favorito = new Favorito("","","");
+        console.log(this.favorito);
+    }
+
+    public onSubmit(){
+        console.log(this.favorito);
     }
 }
